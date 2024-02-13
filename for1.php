@@ -14,11 +14,16 @@ for($x = 0;$x < 100; $x++){
 }
 
 echo "<hr>";
-for($i=0 ;$i <10; $i++) {
+for($i=0 ;$i <=10; $i++) {
     print("<br> 9 x $i = ".(9*$i) );
 }
 echo "<hr>";
-for ($x =1; $x <= 3; $x++)
+for ($x =1; $x <= 3; $x++) {
+    for($y = 1; $y <= 10; $y++){
+        print("<br> $x y $y = ".($x*$y) );
+    }
+    echo "<hr>";
+}
 ?>
 </body>
 </html>
