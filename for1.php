@@ -1,29 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edad</title>
-</head>
-<body>
 <?php
-//imprimir una tabla de multiplicar con for ()
-// luego mejorar para imprimir todas las tablas del 1 al 10 
-for($x = 0;$x < 100; $x++){
-    print(" 〡 ".$x );
-}
-
-echo "<hr>";
-for($i=0 ;$i <=10; $i++) {
-    print("<br> 9 x $i = ".(9*$i) );
-}
-echo "<hr>";
-for ($x =1; $x <= 3; $x++) {
-    for($y = 1; $y <= 10; $y++){
-        print("<br> $x y $y = ".($x*$y) );
+    $tabla = 27;
+    if($tabla % 2 == 0){
+        $divisor = 2;
+    }else{
+        $divisor = 3;
     }
-    echo "<hr>";
-}
-?>
-</body>
-</html>
+    echo "<table width='100%' border= '1'>";
+    echo "<tr>";
+    for($x = 1; $x <= $tabla ; $x++){
+            echo "<td>";
+            for($y = 0; $y <= 10 ; $y++){
+                echo "<br>$x x $y = ".($x*$y);
+        }
+        if($x % $divisor == 0){
+            echo "</td>";
+            echo "</tr>";
+            if($x < $tabla) {
+                echo "<tr>";
+            }
+        }else {
+            echo "</td>";
+        }        
+    }
+    echo "</table>";
+?>    
